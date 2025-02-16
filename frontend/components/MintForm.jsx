@@ -70,7 +70,7 @@ const MintForm = () => {
       const metadataUrl = `https://nftminting-vbec.onrender.com/api/nfts/${tokenId}`;
   
       // Send NFT metadata to backend
-      const res = await axios.post("https://nftminting-vbec.onrender.com/api/create", {
+      const res = await axios.post("https://nftminting-vbec.onrender.com/api/nfts/create", {
         nftId: tokenId,
         nftName,
         nftDescription,

@@ -12,12 +12,12 @@ const Hero = () => {
         <div className='flex mt-8 justify-center items-center gap-4'>
             <button 
             className='bg-gradient2 text-white font-bold mt-4 flex justify-center items-center gap-2 rounded-[12px] h-[58px] w-[194px]'>
-                <Image src='/images/rocket.png' width={16} height={16} />
+                <Image src='/images/rocket.png' width={16} height={16} alt="rocket"/>
                 <p className='text-[16px] font-bold'>Start Creating</p>
             </button>
             <button 
             className='bg-[#1F293780] border border-solid border-[#374151] text-white font-bold mt-4 flex justify-center items-center gap-2 rounded-[12px] h-[58px] w-[194px]'>
-                <Image src='/images/play.png' width={16} height={16} />
+                <Image src='/images/play.png' width={16} height={16} alt="play"/>
                 <p className='text-[16px] font-medium'>Watch Demo</p>
             </button>
         </div>

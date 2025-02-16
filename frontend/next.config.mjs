@@ -6,10 +6,9 @@ images: {
   remotePatterns: [
     {
       protocol: 'https',
-      hostname: 'res.cloudinary.com',
-      pathname: '**',
-    }
-  ]
+      hostname: '**', // Allows all domains (use only in development)
+    },
+  ],
 }
 };
 

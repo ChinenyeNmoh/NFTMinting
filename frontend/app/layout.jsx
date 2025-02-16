@@ -1,6 +1,9 @@
 "use client";
 import { Inter } from "next/font/google";
 import "../assets/styles/globals.css";  
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Providers } from "./providers"; // Import Providers
 
 const inter = Inter({
   subsets: ['latin'],
@@ -12,7 +15,12 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className="w-full h-full bg-gradient1">
       <body className={`${inter.className} w-full min-h-screen overflow-x-hidden`}>
-        {children}
+      <ToastContainer
+            position="top-center"
+            hideProgressBar={false}
+            enableMultiContainer={true}
+          />
+        <Providers>{children}</Providers> {/* Wrap with Providers */}
       </body>
     </html>
   );

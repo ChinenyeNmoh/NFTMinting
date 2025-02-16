@@ -3,6 +3,10 @@ import { Schema, model } from 'mongoose';
 
 const nftSchema = new Schema(
   {
+    nftId:{
+      type: String,
+      required: true
+    },
     nftName: {
       type: String,
       required: true

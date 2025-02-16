@@ -9,7 +9,7 @@ const LoadingPage = () => {
           height="19"
           width="38"
           radius="8"
-          color="#282828"
+          color="#8B5CF6"
           ariaLabel="three-dots-loading"
           visible={true}
         />

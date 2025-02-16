@@ -4,15 +4,16 @@ import NFT from '../models/nftModel.js';
 // POST /api/nfts
 const createNFT = async (req, res) => {
   try {
-    const { nftName, nftDescription, nftLogoUrl, userWalletAddress } = req.body;
+    const {nftId, nftName, nftDescription, nftLogoUrl, userWalletAddress } = req.body;
 
     // Validate input
-    if (!nftName || !nftDescription || !nftLogoUrl || !userWalletAddress) {
+    if (!nftName || !nftId || !nftDescription || !nftLogoUrl || !userWalletAddress) {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
     // Create and save the NFT
     const nft = new NFT({
+      nftId,
       nftName,
       nftDescription,
       nftLogoUrl,
@@ -37,7 +38,7 @@ const getNFTById = async (req, res) => {
   try {
     const nftId = req.params.id;
 
-    const nft = await NFT.findById(nftId);
+    const nft = await NFT.find({nftId : nftId});
 
     if (!nft) {
       return res.status(404).json({ message: 'NFT not found' });
@@ -45,7 +46,12 @@ const getNFTById = async (req, res) => {
 
     return res.json({
         message: 'NFT retrieved successfully',
-        nft,
+        nft:{
+            nftId: nft[0].nftId,
+            nftName: nft[0].nftName,
+            nftDescription: nft[0].nftDescription,
+            nftLogoUrl: nft[0].nftLogoUrl,
+        },
  
      });
   } catch (error) {
@@ -57,13 +63,14 @@ const getNFTById = async (req, res) => {
 //get nft with address
 
 const getNFTByAddress = async (req, res) => {
+  console.log('ran',req.params);
   try {
     const {address}= req.params;
 
     const nfts = await NFT.find({ userWalletAddress: address });
 
     if (!nfts.length) {
-      return res.status(404).json({ message: 'No NFTs found for this address' });
+      return res.status(404).json({ message: 'No NFTs found, please mint your first one using the widget above' });
     }
 
     return res.json({

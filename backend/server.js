@@ -25,7 +25,7 @@ app.use(helmet()); // Auto-secure headers
 
 // CORS: Allow only specific origins 
 const corsOptions = {
-  origin: ["https://nft-minting-lac.vercel.app/"],
+  origin: ["https://nft-minting-lac.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };

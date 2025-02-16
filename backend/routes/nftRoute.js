@@ -4,10 +4,10 @@ const router = express.Router();
 
 
 //routes
-
-router.post('/create', createNFT);
-router.get('/:address', getNFTByAddress);
 router.get('/:id', getNFTById);
+router.get('/get/:address', getNFTByAddress);
+router.post('/create', createNFT);
+
 
 
 export default router;

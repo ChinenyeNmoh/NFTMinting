@@ -63,7 +63,7 @@ const getNFTById = async (req, res) => {
 //get nft with address
 
 const getNFTByAddress = async (req, res) => {
-  console.log('ran',req.params);
+  
   try {
     const {address}= req.params;
 

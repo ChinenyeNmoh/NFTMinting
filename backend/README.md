@@ -1,6 +1,5 @@
 ## Communication Services
-This API provides functionality for sending SMS or emails to users. Below is a guide on how to use the API endpoints, the parameters required, and the expected responses.
-
+This platform allows users to mint NFTs by connecting their wallets using MetaMask or any Ethereum-compatible wallet. The minting process is executed on the Sepolia testnet, and the smart contract manages the NFT minting and transactions. Additionally, users can manage their minted NFTs through a clean UI,and  interact with metadata stored via the backend API.
 ## Getting Started
 
 ### Getting an Authorization key

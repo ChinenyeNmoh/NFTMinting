@@ -42,7 +42,7 @@ export async function checkNftId(tokenId) {
 //fetch nft by address
 export async function fetchNftByAddress(address) {
   try {
-    const res = await axios.get(`http://localhost:5000/api/nfts/${address}`);
+    const res = await axios.get(`https://nftminting-vbec.onrender.com/api/nfts/${address}`);
     return res.data.nft;
   } catch (error) {
     console.error("Error fetching NFTs by address:", error);
@@ -55,7 +55,7 @@ export async function fetchNftByAddress(address) {
 
 export async function fetchNftById(id) {
   try {
-    const res = await axios.get(`http://localhost:5000/api/nfts/${id}`);
+    const res = await axios.get(`https://nftminting-vbec.onrender.com/api/nfts/${id}`);
     
     return res?.data?.nft;
   } catch (error) {

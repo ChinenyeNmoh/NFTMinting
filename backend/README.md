@@ -65,18 +65,21 @@ id (path parameter): The unique ID of the NFT to retrieve.
     "LogoUrl": "https://link-to-nft-logo"
   }
 }
+```
 404: NFT not found
 500: Internal Server Error
+
+
 3. Get NFTs by Wallet Address
-Endpoint: GET /api/nfts/get/:address
+- Endpoint: GET /api/nfts/get/:address
+
 Description: Retrieve all NFTs associated with a specific user's wallet address.
-Parameters:
+- Parameters:
 address (path parameter): The wallet address of the user to retrieve NFTs for.
 Response:
 200: NFTs retrieved successfully
-json
-Copy
-Edit
+
+```
 {
   "message": "NFTs retrieved successfully",
   "nfts": [
@@ -88,81 +91,22 @@ Edit
     }
   ]
 }
+```
 404: No NFTs found for the provided address
 500: Internal Server Error
-Controller Functions
-createNFT(req, res)
+
+
+## Controller Functions
+- createNFT(req, res)
 Handles minting a new NFT. This function validates the input, creates a new NFT record in the database, and returns a response confirming successful minting or an error if something goes wrong.
 
-getNFTById(req, res)
+- getNFTById(req, res)
 Fetches the details of an NFT by its unique nftId provided in the request parameters. It returns the NFT's metadata like name, description, and LogoUrl.
 
-getNFTByAddress(req, res)
+- getNFTByAddress(req, res)
 Fetches all NFTs associated with a specific user’s wallet address. It returns a list of NFTs if any are found, or a message indicating no NFTs have been minted for the given address.
 
-Example of Use
-Mint a New NFT:
-POST Request to /api/nfts/create
-Headers:
-text
-Copy
-Edit
-Authorization: Bearer <Your_API_Key>
-Body:
-json
-Copy
-Edit
-{
-  "name": "CryptoArt #001",
-  "description": "A limited edition digital artwork.",
-  "LogoUrl": "https://example.com/cryptoart-logo.png"
-}
-Response:
-json
-Copy
-Edit
-{
-  "message": "NFT minted successfully",
-  "nft": {
-    "nftId": "12345",
-    "name": "CryptoArt #001",
-    "description": "A limited edition digital artwork.",
-    "LogoUrl": "https://example.com/cryptoart-logo.png",
-    "userWalletAddress": "0x1234567890abcdef1234567890abcdef12345678"
-  }
-}
-Get NFT by ID:
-GET Request to /api/nfts/:id (Replace :id with an actual nftId)
-Response:
-json
-Copy
-Edit
-{
-  "message": "NFT retrieved successfully",
-  "nft": {
-    "nftId": "12345",
-    "name": "CryptoArt #001",
-    "description": "A limited edition digital artwork.",
-    "LogoUrl": "https://example.com/cryptoart-logo.png"
-  }
-}
-Get NFTs by Wallet Address:
-GET Request to /api/nfts/get/:address (Replace :address with a valid wallet address)
-Response:
-json
-Copy
-Edit
-{
-  "message": "NFTs retrieved successfully",
-  "nfts": [
-    {
-      "nftId": "12345",
-      "name": "CryptoArt #001",
-      "description": "A limited edition digital artwork.",
-      "LogoUrl": "https://example.com/cryptoart-logo.png"
-    }
-  ]
-}
+
 Conclusion
 The NFT Minting Platform API provides endpoints for minting, retrieving, and managing NFTs on the Sepolia testnet. By connecting your wallet and interacting with the API, users can mint their NFTs and retrieve them using unique identifiers or wallet addresses. The backend ensures data storage and metadata management for a seamless NFT experience.
 

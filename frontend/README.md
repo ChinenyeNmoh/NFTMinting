@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nftMint
+
+![Homepage](nft.png)
+
+## Project Overview
+
+The frontend of the NFT Minting Application was built using Next.js, following the provided Figma design. It includesthe following key features:
+
+-UI Design Implementation:
+-Users will connect their Ethereum wallet (e.g., MetaMask) to mint NFTs.
+-Once connected, users can mint NFTs by filling out a form (NFT name, description, logo, etc.).
+The application will interact with the Ethereum smart contract to process the minting transaction.
+The frontend will call the Node.js backend to retrieve metadata for minted NFTs and display them to the user.
+This frontend was deployed on vercel
+
+
+### Tech Stack
+
+Frontend:
+
+- Next.js (React framework)
+- Tailwind CSS (for styling)
+- React Toastify (for notifications)
+
+
+Other Libraries:
+
+- Axios for API calls
+- React Hook Form for form handling
 
 ## Getting Started
 
-First, run the development server:
+To get started with this project, follow the steps below:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installation
+
+1. Clone the repository.
+
+   ```sh
+   https://github.com/ChinenyeNmoh/NFTMinting/tree/main/frontend
+
+   ```
+
+2. Install the required packages.
+
+   ```sh
+   npm install package.json
+   ```
+
+
+
+### Start the application for development.
+
+```sh
+npm run dev 
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Frontend: The frontend is built with Next.js and deployed on Vercel for fast and reliable hosting, leveraging Vercel's optimized serverless infrastructure.
+(https://nft-minting-lac.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Chinenye Nmoh [Github](https://github.com/ChinenyeNmoh/) / [Linkedin](https://www.linkedin.com/in/chinenye-nmoh-88479699/) / [Email](chinenyeumeaku@gmail.com)

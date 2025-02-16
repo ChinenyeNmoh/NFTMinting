@@ -106,6 +106,9 @@ Fetches the details of an NFT by its unique nftId provided in the request parame
 - getNFTByAddress(req, res)
 Fetches all NFTs associated with a specific user’s wallet address. It returns a list of NFTs if any are found, or a message indicating no NFTs have been minted for the given address.
 
+##Live url
+Open [https://nftminting-vbec.onrender.com](https://nftminting-vbec.onrender.com)
+https://nftminting-vbec.onrender.com
 
 Conclusion
 The NFT Minting Platform API provides endpoints for minting, retrieving, and managing NFTs on the Sepolia testnet. By connecting your wallet and interacting with the API, users can mint their NFTs and retrieve them using unique identifiers or wallet addresses. The backend ensures data storage and metadata management for a seamless NFT experience.

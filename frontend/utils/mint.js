@@ -55,7 +55,7 @@ export async function fetchNftByAddress(address) {
 
 export async function fetchNftById(id) {
   try {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/${id}`);
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/nfts/${id}`);
     
     return res?.data?.nft;
   } catch (error) {

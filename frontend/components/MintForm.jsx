@@ -67,10 +67,10 @@ const MintForm = () => {
       console.log("Unique NFT ID generated:", tokenId);
   
       // Construct metadata URL
-      const metadataUrl = `https://nftminting-vbec.onrender.com/api/nfts/${tokenId}`;
+      const metadataUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/api/nfts/${tokenId}`;
   
       // Send NFT metadata to backend
-      const res = await axios.post("https://nftminting-vbec.onrender.com/api/nfts/create", {
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/nfts/create`, {
         nftId: tokenId,
         nftName,
         nftDescription,

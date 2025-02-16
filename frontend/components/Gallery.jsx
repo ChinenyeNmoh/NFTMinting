@@ -35,7 +35,7 @@ const Gallery = () => {
         const fetchNFTs = async () => {
 
             try {
-                const res = await axios.get(`https://nftminting-vbec.onrender.com/api/nfts/get/${address}`);
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/get/${address}`);
                 console.log(res.data);
                 setNfts(res.data.nfts);
                
